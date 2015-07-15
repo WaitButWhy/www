@@ -97,3 +97,4 @@ wp-content/mysql.sql
 *.wmv
 *.avi
 
+/nbproject/private/

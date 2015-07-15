@@ -159,6 +159,21 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 			window.open('http://twitter.com/waitbutwhy');
 		});
 	});
+	//This function will stop links in dinner table comments from redirecting people away from WBW and 
+	//instead will open a new window to the link path
+	(function() {
+		$(document).ready(function() {
+			$('body').on('click', 'a', function() {
+				event.preventDefault();
+				//Ensure the hyperlink actually has an href prop
+				if(typeof $(this).prop('href') !== 'undefined') {
+					//Open a new window
+					window.open($(this).prop('href'));
+				}
+
+			});
+		});
+	})();
 </script>
 </head>
 <body <?php body_class(); ?>>
